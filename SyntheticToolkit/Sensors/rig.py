@@ -44,6 +44,13 @@ class Rig(DynamicObject):
         self._sensors = []
         self._o = "[SensorRig] "
 
+    
+    def compute_observations(self):
+        out = []
+        for s in self._sensors:
+            out.append(s. sample_sensor())
+        return out
+
     def create_rig_from_file(
         self,
         path,
